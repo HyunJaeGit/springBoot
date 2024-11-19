@@ -9,8 +9,6 @@
 
 ## ⚙️ Dependencies
 
-The project uses the following Spring Boot starters:
-
 - **spring-boot-starter-web**: For building web and RESTful APIs.
 - **spring-boot-starter-test**: For testing the application.
 
