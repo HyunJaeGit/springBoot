@@ -1,4 +1,4 @@
-# Spring Boot Web com.devbig.spring.Application
+# Spring Boot Web com.devbig.spring.web.Application
 
 
 ## 🛠 Project Details
