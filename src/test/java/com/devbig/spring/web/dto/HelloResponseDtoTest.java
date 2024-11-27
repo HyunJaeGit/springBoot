@@ -15,7 +15,7 @@ public class HelloResponseDtoTest {
         int amount = 1000;
 
         //when
-        HelloControllerDto dto = new HelloControllerDto(name,amount);
+        HelloResponseDto dto = new HelloResponseDto(name,amount);
 
         //then
         assertThat(dto.getName()).isEqualTo(name);

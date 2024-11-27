@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public class HelloControllerDto {
+public class HelloResponseDto {
 
     private final String name;
     private final int amount;
