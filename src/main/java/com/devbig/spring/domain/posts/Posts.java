@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+// spring 때의 생성자 페이지와 테이블을 연결하는걸 클래스로 한번에 해결할 수 있음
+
 @Getter                 // 1. Getter : 클래스 내 모든 필드의 Getter method를 자동 생성
 @NoArgsConstructor      // 2. NoArgsConstructor : 기본 생성자 자동 추가. ex) public Posts() {} 와 같은 효과
 @Entity                 // 3. Entity : 테이블과 링크될 클래스임을 나타 냄.
