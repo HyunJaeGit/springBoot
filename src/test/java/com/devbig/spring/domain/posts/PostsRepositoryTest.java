@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 
 // - save, findAll 기능 테스트
 @RunWith(SpringRunner.class)
@@ -34,6 +36,13 @@ public class PostsRepositoryTest {
                                     .author("jojoldu@gmail.com")
                                     .build()
                             );
+        //when
+        List<Posts> postsList = postsRepository.findAll();
+
+        //then
+        Posts posts = postsList.get(0);
+        assertThat(posts.getTitle()).isEqualTo(title);
+        assertThat(posts.getContent()).isEqualTo(content);
     }
 
 }
