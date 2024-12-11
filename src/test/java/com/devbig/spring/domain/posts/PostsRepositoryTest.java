@@ -19,12 +19,21 @@ public class PostsRepositoryTest {
 
     @After
     public void cleanup() {
-
+        postsRepository.deleteAll();
     }
 
     @Test
     public void 게시글저장_불러오기() {
-ㄴ
+ㄴ       //given
+        String title = "테스트 게시글";
+        String content = "테스트 본문";
+
+        postsRepository.save(Posts.builder()
+                                    .title(title)
+                                    .content(content)
+                                    .author("jojoldu@gmail.com")
+                                    .build()
+                            );
     }
 
 }
