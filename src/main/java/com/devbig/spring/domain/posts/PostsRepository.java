@@ -6,8 +6,12 @@ package com.devbig.spring.domain.posts;
 // - SQL 쿼리를 작성하지 않고도(JDBC 코드없이) DB를 접근 객체지향적 코드 작성(유지 보수)
 // - Entity class는 기본 Repository 없이는 제대로 역할할 수 가 없음 = domain 패키지로 함께 관리
 
-public interface PostsRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface PostsRepository extends JpaRepository<Posts, Long> {
+                                // extends JpaRepository<Entity 클래스, PK타입> 을 상속하면
+                                // - 기본적인 CRUD method가 자동으로 생성된다 >> PostsRepositoryTest 클래스에서
+                                // - >> 테스트 할때 상속받지 않으면 CRUD 메소드를 찾을 수 없음
 
 
 
