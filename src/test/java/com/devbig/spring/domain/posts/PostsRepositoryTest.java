@@ -48,8 +48,5 @@ public class PostsRepositoryTest {
         assertThat(posts.getContent()).isEqualTo(content);
     }
 
-    // Test한 쿼리의 실제 로그를 확인함 >> H2 쿼리로 작성되어있어서 Mysql 버전으로 변경 필요
-    // - application.properties 에서 설정 >>
-    // - spring.jpa.properties.hibernate.dialect=org.hivernate.dialect.MySQL5InnoDBDialect
 
 }
