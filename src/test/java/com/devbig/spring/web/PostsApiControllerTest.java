@@ -3,7 +3,9 @@ package com.devbig.spring.web;
 
 import com.devbig.spring.domain.posts.Posts;
 import com.devbig.spring.domain.posts.PostsRepository;
+import com.devbig.spring.web.dto.PostsResponseDto;
 import com.devbig.spring.web.dto.PostsSaveRequestDto;
+import com.devbig.spring.web.dto.PostsUpdateRequestDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -73,14 +75,8 @@ public class PostsApiControllerTest {
 
     //======================= 수정, 조회 기능 테스트 =============================
 
-    @PutMapping("/api/v1/posts/{id}")
-    public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto) {
-        return postsService.update(id, requestDto);
-    }
 
-    @GetMapping("/api/v1/posts/{id}")
-    public PostsResponseDto findById (@PathVariable Long id) {
-        return postsService.findById(id);
-    }
+
+
 
 }
