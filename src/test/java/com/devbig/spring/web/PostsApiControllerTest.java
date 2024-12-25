@@ -19,6 +19,9 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+// 등록 기능 테스트
+// 수정/조회 기능 테스트
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PostsApiControllerTest {
@@ -37,6 +40,7 @@ public class PostsApiControllerTest {
         postsRepository.deleteAll();
     }
 
+    //======================= 등록 기능 조회 =============================
     @Test
     public void Posts_등록된다() throws Exception {
 
@@ -62,6 +66,9 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
+
+    //======================= 수정, 조회 기능 테스트 =============================
+
 
 
 }
