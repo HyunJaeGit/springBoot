@@ -1,5 +1,6 @@
 package com.devbig.spring.web.dto;
 
+import com.devbig.spring.domain.posts.Posts;
 import com.devbig.spring.domain.posts.PostsRepository;
 import lombok.Getter;
 

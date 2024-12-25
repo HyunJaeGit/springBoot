@@ -25,12 +25,19 @@ public class Posts {    //          - 기본값으로 글래스의 카멜케이�
 
     private String author;
 
+    // 등록
     @Builder                                                        // 4. Builder : 해당 클래스의 빌더 패턴 클래스 생성
     public Posts(String title, String content, String author) {     // - 생성자 상단에 선언 시 생성자에 포함된 필드만 빌더에 포함
         this.title = title;
         this.content = content;
         this.author = author;
 
+    }
+
+    // 업데이트
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 
 
