@@ -9,8 +9,8 @@ import javax.persistence.*;
 // spring 때의 생성자 페이지와 테이블을 연결하는걸 클래스로 한번에 해결할 수 있음
 @Getter                 // 1. Getter : 클래스 내 모든 필드의 Getter method를 자동 생성
 @NoArgsConstructor      // 2. NoArgsConstructor : 기본 생성자 자동 추가. ex) public Posts() {} 와 같은 효과
-@Entity                 // 3. Entity : 테이블과 링크될 클래스임을 나타 냄.
-public class Posts {    //          - 기본값으로 글래스의 카멜케이스 이름을 언더스코어 네이밍(_)으로 테이블 이름을 매칭
+@Entity                 // 3. Entity : 테이블과 링크될 클래스임을 나타 냄. - 기본값으로 글래스의 카멜케이스 이름을 언더스코어 네이밍(_)으로 테이블 이름을 매칭
+public class Posts extends BaseTimeEntity {    // Posts 클래스가 BaseTimeEntity 클래스를 상속받음
 
     @Id                                                     // 1. ID : 해당 테이블의 PK 필드를 나타냅니다
     @GeneratedValue(strategy = GenerationType.IDENTITY)     // 2. GeneratedValue : PK의 생성 규칙, spring boot 2.0 이상부터
