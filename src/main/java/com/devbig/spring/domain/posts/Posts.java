@@ -1,5 +1,6 @@
 package com.devbig.spring.domain.posts;
 
+import com.devbig.spring.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

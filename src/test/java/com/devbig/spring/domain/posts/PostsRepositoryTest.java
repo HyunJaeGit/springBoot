@@ -22,7 +22,7 @@ public class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
 
-@After                                                       // After
+    @After                                                       // After
     public void cleanup() {
         postsRepository.deleteAll();
 }   // - Junit에서 단위 테스트가 끝날 때마다 수행되는 메소드를 정
@@ -53,7 +53,7 @@ public class PostsRepositoryTest {
     @Test       // JPA Auditing Test code
     public void BaseTimeEntity_등록() {
         // given
-        LocalDateTime now = LocalDateTime.of(2025,1,1,0,0,0);
+        LocalDateTime now = LocalDateTime.of(2019,6,4,0,0,0);
         postsRepository.save(Posts.builder()
                         .title("title")
                         .content("content")
@@ -65,11 +65,11 @@ public class PostsRepositoryTest {
         // then
         Posts posts = postsList.get(0);
 
-        System.out.println(">>>>>>>>>> createDate=" + posts.getCreateDate()
-                + ", modifiedDate=" + posts.getModifiedDate());
+        System.out.println(">>>>>>>>>> createDate=" + posts.getCreateDate() + ", modifiedDate=" + posts.getModifiedDate());
 
         assertThat(posts.getCreateDate()).isAfter(now);
         assertThat(posts.getModifiedDate()).isAfter(now);
+
     }
 
 }
