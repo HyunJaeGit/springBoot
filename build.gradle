@@ -48,5 +48,6 @@ dependencies {
        - 이 프로젝트에선 JPA의 테스트, 로컬 환경에서의 구동에서 사용할 예정
     */
 
+    compile('org.springframework.boot:spring-boot-starter-mustache')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
