@@ -9,7 +9,6 @@
        AJAX: 비동기 요청을 처리하며, 성공(done)과 실패(fail)를 분리해 처리.
 
 */
-
 var main = {
     init : function () {
         var _this = this;
