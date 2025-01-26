@@ -7,7 +7,6 @@
        init 메서드: 버튼 클릭 이벤트를 등록.
        save 메서드: 입력 값을 수집하고, 서버에 비동기 POST 요청.
        AJAX: 비동기 요청을 처리하며, 성공(done)과 실패(fail)를 분리해 처리.
-
 */
 var main = {
     init : function () {
