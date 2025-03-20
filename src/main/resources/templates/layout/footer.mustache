@@ -4,5 +4,15 @@
     <!-- index.js 추가 -->
     <script src="/js/app/index.js"></script>
 
+    <!--
+        index.js 호출 코드를 보면 절대 경로(/)로 바로 시작합니다.
+        스프링 부트는 기본적으로 src/main/resources/static 에 위치한
+        JS, CSS, 이미지 등 정적 파일들은 URL에서 /로 설정됨
+        ex)
+        src/main/resources/js/···(http://도메인/JS/···)
+        src/main/resources/css/···(http://도메인/css/···)
+        src/main/resources/image/···(http://도메인/image/···)
+     -->
+
 </body>
 </html>
