@@ -19,6 +19,7 @@ public class PostsService {
     // save 기능 서비스
     @Transactional
     public Long save(PostsSaveRequestDto requestDto) {
+
         return postsRepository.save(requestDto.toEntity()).getId();
     }
 

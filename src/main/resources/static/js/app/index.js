@@ -18,6 +18,8 @@ var main = {
             _this.save();
         });
     },
+
+    // 저장 버튼(save button)
     save : function () {
         var data = {
             title: $('#title').val(),
@@ -40,3 +42,5 @@ var main = {
     }
 
 };
+
+main.init();
