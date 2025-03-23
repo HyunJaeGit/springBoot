@@ -7,12 +7,17 @@ package com.devbig.spring.domain.posts;
 // - Entity class는 기본 Repository 없이는 제대로 역할할 수 가 없음 = domain 패키지로 함께 관리
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
 
 public interface PostsRepository extends JpaRepository<Posts, Long> {
                                 // extends JpaRepository<Entity 클래스, PK타입> 을 상속하면
                                 // - 기본적인 CRUD method가 자동으로 생성된다 >> PostsRepositoryTest 클래스에서
                                 // - >> 테스트 할때 상속받지 않으면 CRUD 메소드를 찾을 수 없음
 
+    @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
+    List<Posts> findAllDesc();
 
 
 }
