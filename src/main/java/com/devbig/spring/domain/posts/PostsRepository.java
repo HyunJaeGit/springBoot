@@ -21,5 +21,4 @@ public interface PostsRepository extends JpaRepository<Posts, Long> {
     // SpringDataJpa에서 제공하지 않는 메소드는 쿼리로 작성해도 됨
     // select 는 SpringDataJpa 기본 메소드만으로 해결가능하지만 @Query가 가독성이 좋음
 
-
 }
