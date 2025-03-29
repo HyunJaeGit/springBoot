@@ -9,8 +9,8 @@ import com.devbig.spring.web.dto.PostsSaveRequestDto;
 import com.devbig.spring.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
