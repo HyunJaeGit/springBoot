@@ -15,12 +15,12 @@ var main = {
     init : function () {
         var _this = this;
 
-        // 저장 버튼 누르면 기능 호출
+        // 저장 버튼 누르면 기능 호출 (버튼클릭 -> save() 함수 호출 jquery 바인딩)
         $('#btn-save').on('click', function () {
             _this.save();
         });
 
-        // 업데이트 버튼 누르면 기능 호출
+        // 업데이트 버튼 누르면 기능 호출 (버튼클릭 -> update() 함수 호출 jquery 바인딩)
         $('#btn-update').on('click', function() {
             _this.update();
         });
