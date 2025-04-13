@@ -49,6 +49,32 @@ var main = {
        });
     }
 
+    update : function () {
+        var data = {
+                title: $('#title').val(),
+                content: $('#content').val()
+            };
+        var id = $('#id').val();
+
+        // HTML 입력폼에서 제목과 내용 값을 읽어서 data 객체에 담는 코드예요.
+        // $('#title').val() → id가 title인 <input> 요소의 값을 가져옴
+        // $('#content').val() → id가 content인 <textarea> 요소의 값을 가져옴
+        // 그걸 data라는 객체에 담음
+
+       $.ajax({
+            type: 'PUT',
+            url: '/api/v1/posts/' +id,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data)
+       }).done(function() {
+            alert('글이 수정되었습니다.');
+            window.location.href = '/';
+       }).fail(function() {
+            alert(JSON.stringify(error));
+       });
+    }
+
 };
 
 main.init();
