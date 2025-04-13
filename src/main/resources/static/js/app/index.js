@@ -49,6 +49,7 @@ var main = {
        });
     }
 
+    // 수정(update) 함수
     update : function () {
         var data = {
                 title: $('#title').val(),
