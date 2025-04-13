@@ -14,9 +14,17 @@ var main = {
 
     init : function () {
         var _this = this;
+
+        // 저장 버튼 누르면 기능 호출
         $('#btn-save').on('click', function () {
             _this.save();
         });
+
+        // 업데이트 버튼 누르면 기능 호출
+        $('#btn-update').on('click', function() {
+            _this.update();
+        });
+
     },
 
     // 저장 버튼(save button)
