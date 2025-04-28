@@ -63,7 +63,7 @@ var main = {
         // 그걸 data라는 객체에 담음
 
        $.ajax({
-            type: 'PUT',
+            type: 'PUT',  // PostsApiController의 API에서 @PutMapping으로 선언했기 떄문에 PUT 사용 (REST 규약)
             url: '/api/v1/posts/' +id,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
