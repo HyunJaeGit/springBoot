@@ -47,7 +47,7 @@ var main = {
        }).fail(function(error) {
             alert(JSON.stringify(error));
        });
-    }
+    },
 
     // 수정(update) 함수
     update : function () {
@@ -64,7 +64,7 @@ var main = {
 
        $.ajax({
             type: 'PUT',  // PostsApiController의 API에서 @PutMapping으로 선언했기 떄문에 PUT 사용 (REST 규약)
-            url: '/api/v1/posts/' +id,
+            url: '/api/v1/posts/' +id,  // 어느게시글을 수정할지 구분하기 위해 Path에 id 추가
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
